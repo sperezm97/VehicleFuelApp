@@ -1,10 +1,13 @@
 import React from "react";
 import { View, Text } from "react-native";
+import { WithSafeArea } from "../app/hooks/hoc";
 
-export default function Fuel() {
+const Fuel: React.FunctionComponent = () => {
   return (
     <View>
       <Text>Fuel</Text>
     </View>
   );
-}
+};
+
+export default WithSafeArea(Fuel);
