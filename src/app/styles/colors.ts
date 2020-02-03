@@ -7,8 +7,8 @@ export default {
   },
   white: "#FFFFFF",
   black: "#000000",
-  red: "#E62B48",
-  orange: "#FF4400",
+  red: "#E4222B",
+  orange: "#FE453D",
   purple: "#6F31BF",
-  blue: "#0096FC"
+  blue: "#0B7BFF"
 };
