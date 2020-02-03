@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { WithSafeArea } from "../app/hooks/hoc";
+import withHOC from "../app/hooks/hoc";
 
 const Services: React.FunctionComponent = () => {
   return (
@@ -9,4 +9,4 @@ const Services: React.FunctionComponent = () => {
     </View>
   );
 };
-export default WithSafeArea(Services);
+export default withHOC(Services);
