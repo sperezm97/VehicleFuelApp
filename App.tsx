@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AppNavigator from "./src/app/navigation";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
+import "./src/app/config/sentry";
 
 export default function App() {
   const [isFontLoaded, setIsFontLoaded] = useState(false);
