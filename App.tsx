@@ -3,6 +3,7 @@ import AppNavigator from "./src/app/navigation";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
 import "./src/app/config/sentry";
+import "./src/app/config/env";
 
 export default function App() {
   const [isFontLoaded, setIsFontLoaded] = useState(false);

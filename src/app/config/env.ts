@@ -1,16 +1,26 @@
-import dotEnv from "react-native-dotenv";
+import {
+  SENTRY_TOKEN,
+  SENTRY_PROJECT,
+  FIREBASE_API_KEY,
+  FIREBASE_AUTH_DOMAIN,
+  FIREBASE_DATABASE_URL,
+  FIREBASE_STORAGE_BUCKET,
+  FIREBASE_PROJECT_ID,
+  FIREBASE_MSSG_SENDER_ID,
+  FIREBASE_APP_ID,
+  FIREBASE_MESUAMENT_ID
+} from "react-native-dotenv";
 
 export default {
-  sentryKey: dotEnv.SENTRY_TOKEN,
-  sentryProject: dotEnv.SENTRY_PROJECT,
-  sentryToken: dotEnv.SENTRY_TOKEN,
+  sentryKey: SENTRY_TOKEN,
+  sentryProject: SENTRY_PROJECT,
 
-  firebaseApiKey: dotEnv.FIREBASE_API_KEY,
-  firebaseAuthDOMAIN: dotEnv.FIREBASE_AUTH_DOMAIN,
-  firebaseDataBaseUrl: dotEnv.FIREBASE_DATABASE_URL,
-  firebaseStorageBucket: dotEnv.FIREBASE_STORAGE_BUCKET,
-  firebaseProjectId: dotEnv.FIREBASE_PROJECT_ID,
-  firebaseMessagingSenderId: dotEnv.FIREBASE_PROJECT_ID,
-  firebaseAppId: dotEnv.FIREBASE_PROJECT_ID,
-  firebaseMeasurementId: dotEnv.FIREBASE_PROJECT_ID
+  firebaseApiKey: FIREBASE_API_KEY,
+  firebaseAuthDOMAIN: FIREBASE_AUTH_DOMAIN,
+  firebaseDataBaseUrl: FIREBASE_DATABASE_URL,
+  firebaseStorageBucket: FIREBASE_STORAGE_BUCKET,
+  firebaseProjectId: FIREBASE_PROJECT_ID,
+  firebaseMessagingSenderId: FIREBASE_MSSG_SENDER_ID,
+  firebaseAppId: FIREBASE_APP_ID,
+  firebaseMeasurementId: FIREBASE_MESUAMENT_ID
 };
