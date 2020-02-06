@@ -18,7 +18,12 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.VehicleFuel",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.VehicleFuel",
+      "versionCode": 1
     },
     "hooks": {
       "postPublish": [
