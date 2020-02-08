@@ -25,13 +25,13 @@ export default {
     fontWeight: 500
   },
   subHeading: {
-    fontSize: 13,
+    fontSize: 15,
     lineHeight: 26,
-    fontWeight: 600
+    fontWeight: 900
   },
   body: {
     fontSize: 15,
-    lineHeight: 20,
+    lineHeight: 22,
     fontWeight: 400
   },
   caption: {
