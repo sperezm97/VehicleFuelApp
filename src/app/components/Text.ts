@@ -2,10 +2,9 @@ import { Text as nbText } from "native-base";
 import styled from "styled-components";
 import styledTS from "styled-components-ts";
 import is from "styled-is";
-import { ConfigText } from "../types";
 
-const Text = styledTS<ConfigText>(nbText)`
-  font-family: IBMPlexMono, IBMPlexSans;
+const Text = styled(nbText)`
+  /* font-family: IBMPlexMono, IBMPlexSans; */
   color: ${({ color, theme }) => color || theme.colors.grey.dark};
 
   ${is("displayXLarge")`
@@ -55,6 +54,8 @@ const Text = styledTS<ConfigText>(nbText)`
     line-height: ${({ theme }) => theme.fonts.caption.lineHeight}px;
     font-weight: ${({ theme }) => theme.fonts.caption.fontWeight};
   `};
+
+  font-weight: ${({ weight }) => weight || "normal"};
 `;
 
 export default Text;
