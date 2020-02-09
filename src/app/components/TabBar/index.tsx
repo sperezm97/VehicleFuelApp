@@ -4,7 +4,6 @@ import { Icon } from "native-base";
 import styles from "./styles";
 
 const TabBar = ({ state, descriptors, navigation, icons }) => {
-  console.log(state);
   return (
     <View style={styles.container}>
       {state.routes.map((route, index) => {
