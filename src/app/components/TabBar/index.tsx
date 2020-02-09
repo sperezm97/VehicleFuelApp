@@ -29,8 +29,6 @@ const TabBar = ({ state, descriptors, navigation, icons }) => {
           }
         };
 
-        // console.log(state, "state");
-        console.log(route);
         return (
           <TouchableOpacity onPress={onPress} style={styles.onPressContainer}>
             <View style={{ flex: 1 }}></View>
