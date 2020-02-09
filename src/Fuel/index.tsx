@@ -7,14 +7,15 @@ import {
   LeftCard,
   RightCard,
   Container,
-  HeaderList
+  HeaderList,
+  FloatButton,
+  GallonItem
 } from "../app/components";
 import { fuelList } from "../app/hooks/mock";
-import GallonItem from "../app/components/List/GallonItem";
-import FloatButton from "../app/components/FloatButton";
 
 const Fuel: React.FunctionComponent = () => {
   const [value, setValue] = useState("All Vehicles");
+
   const header = () => (
     <HeaderList
       value={value}
@@ -46,7 +47,7 @@ const Fuel: React.FunctionComponent = () => {
         <CardList data={fuelList} renderItem={renderItem} header={header} />
       </Content>
       <View>
-        <FloatButton />
+        <FloatButton onPress={() => {}} />
       </View>
     </Container>
   );
