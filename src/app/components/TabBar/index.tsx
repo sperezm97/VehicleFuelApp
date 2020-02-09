@@ -51,7 +51,7 @@ const TabBar = ({ state, descriptors, navigation, icons }) => {
                 style={[
                   styles.label,
                   {
-                    color: isFocused ? "#E4222B" : "#9498A7"
+                    color: isFocused ? "#000" : "#9498A7"
                   }
                 ]}
               >
