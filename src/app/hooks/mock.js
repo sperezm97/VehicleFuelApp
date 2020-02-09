@@ -70,3 +70,76 @@ export const fuelList = [
     dateFully: "2018/06/21"
   }
 ];
+
+export const serviceList = [
+  {
+    id: 1,
+    typeService: "Maintenance",
+    slug: "Oil Change",
+    price: "520.00",
+    created_at: "06/15/2018"
+  },
+  {
+    id: 2,
+    typeService: "Tolls",
+    slug: "HighWay Toll",
+    price: "52.21",
+    created_at: "06/14/2018"
+  },
+  {
+    id: 3,
+    typeService: "Parking",
+    slug: "Office Parking",
+    price: "38.35",
+    created_at: "06/15/2018"
+  },
+  {
+    id: 4,
+    typeService: "Maintenance",
+    slug: "Oil Change",
+    price: "520",
+    created_at: "06/15/2018"
+  },
+  {
+    id: 5,
+    typeService: "Maintenance",
+    slug: "Oil Change",
+    price: "520",
+    created_at: "06/15/2018"
+  },
+  {
+    id: 6,
+    typeService: "Maintenance",
+    slug: "Oil Change",
+    price: "520",
+    created_at: "06/15/2018"
+  },
+  {
+    id: 7,
+    typeService: "Maintenance",
+    slug: "Oil Change",
+    price: "520",
+    created_at: "06/15/2018"
+  },
+  {
+    id: 8,
+    typeService: "Maintenance",
+    slug: "Oil Change",
+    price: "520",
+    created_at: "06/15/2018"
+  },
+  {
+    id: 9,
+    typeService: "Maintenance",
+    slug: "Oil Change",
+    price: "520",
+    created_at: "06/15/2018"
+  },
+  {
+    id: 10,
+    typeService: "Maintenance",
+    slug: "Oil Change",
+    price: "520",
+    created_at: "06/15/2018"
+  }
+];
