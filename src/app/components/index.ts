@@ -11,6 +11,8 @@ import GallonItem from "./List/GallonItem";
 import HeaderList from "./List/HeaderList";
 import ServiceItem from "./List/ServiceItem";
 
+import TabBar from "./TabBar";
+
 export {
   Text,
   View,
@@ -21,5 +23,6 @@ export {
   BaseList,
   GallonItem,
   HeaderList,
-  ServiceItem
+  ServiceItem,
+  TabBar
 };
