@@ -12,6 +12,7 @@ import HeaderList from "./List/HeaderList";
 import ServiceItem from "./List/ServiceItem";
 
 import TabBar from "./TabBar";
+import FloatButton from "./FloatButton";
 
 export {
   Text,
@@ -24,5 +25,6 @@ export {
   GallonItem,
   HeaderList,
   ServiceItem,
-  TabBar
+  TabBar,
+  FloatButton
 };
