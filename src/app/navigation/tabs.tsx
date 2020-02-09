@@ -7,6 +7,7 @@ import {
 import * as screens from "../screens";
 import theme from "../styles";
 import { Icon } from "native-base";
+import { TabBar } from "../components";
 
 const MainTap = createBottomTabNavigator();
 
@@ -24,70 +25,39 @@ const defaultTabBarOptions: BottomTabBarOptions = {
 
 const defaultScreenOptions: BottomTabNavigationOptions = {};
 
+// TODO: Refactor Icons Selected
+const iconValues = [
+  {
+    type: "MaterialCommunityIcons",
+    name: "fuel"
+  },
+  {
+    type: "MaterialCommunityIcons",
+    name: "format-list-bulleted"
+  },
+  {
+    type: "MaterialCommunityIcons",
+    name: "chart-areaspline"
+  },
+  {
+    type: "MaterialCommunityIcons",
+    name: "car-multiple"
+  }
+];
+
 function MainTapNavigator() {
   return (
     <MainTap.Navigator
       initialRouteName="FUEL"
       tabBarOptions={defaultTabBarOptions}
       screenOptions={defaultScreenOptions}
+      tabBar={props => <TabBar {...props} icons={iconValues} />}
       backBehavior="history"
     >
-      <MainTap.Screen
-        name="FUEL"
-        component={screens.Fuel}
-        options={{
-          tabBarIcon: props => (
-            <Icon
-              name="fuel"
-              type="MaterialCommunityIcons"
-              style={{ color: props.color, fontSize: props.size }}
-              active={props.focused}
-            />
-          )
-        }}
-      />
-      <MainTap.Screen
-        name="SERVICES"
-        component={screens.Services}
-        options={{
-          tabBarIcon: props => (
-            <Icon
-              name="format-list-bulleted"
-              type="MaterialCommunityIcons"
-              style={{ color: props.color, fontSize: props.size }}
-              active={props.focused}
-            />
-          )
-        }}
-      />
-      <MainTap.Screen
-        name="REPORTS"
-        component={screens.Reports}
-        options={{
-          tabBarIcon: props => (
-            <Icon
-              name="chart-areaspline"
-              type="MaterialCommunityIcons"
-              style={{ color: props.color, fontSize: props.size }}
-              active={props.focused}
-            />
-          )
-        }}
-      />
-      <MainTap.Screen
-        name="MYGARBAGE"
-        component={screens.MyGarbage}
-        options={{
-          tabBarIcon: props => (
-            <Icon
-              name="car-multiple"
-              type="MaterialCommunityIcons"
-              style={{ color: props.color, fontSize: props.size }}
-              active={props.focused}
-            />
-          )
-        }}
-      />
+      <MainTap.Screen name="FUEL" component={screens.Fuel} />
+      <MainTap.Screen name="SERVICES" component={screens.Services} />
+      <MainTap.Screen name="REPORTS" component={screens.Reports} />
+      <MainTap.Screen name="MYGARBAGE" component={screens.MyGarbage} />
     </MainTap.Navigator>
   );
 }
