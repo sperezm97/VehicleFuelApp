@@ -83,6 +83,12 @@ const View = styled(nbView)`
     justify-content: space-between;
     align-content: center
   `}
+  ${is("serviceThumb")`
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: ${({ color }) => color}
+  `}
 
 `;
 
