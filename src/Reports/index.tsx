@@ -29,8 +29,8 @@ const Reports: React.FunctionComponent = () => {
 
   return (
     <Container>
-      <View column center>
-        <View center>
+      <View flex column center>
+        <View center margin={[10, 0, 0, 0]}>
           <Text caption color={colors.grey.base}>
             Your Total Expenditure
           </Text>
@@ -38,12 +38,12 @@ const Reports: React.FunctionComponent = () => {
             displayXLarge
             color={colors.black}
             weight={"bold"}
-            style={{ marginTop: 10, marginBottom: 5 }}
+            style={{ marginTop: 10, marginBottom: 10 }}
           >
             $39,921.31
           </Text>
         </View>
-        {/* <Chart /> */}
+        <Chart />
       </View>
       <Content scrollEnabled={false} nestedScrollEnabled>
         <CardList data={categoryList} renderItem={renderItem} header={header} />

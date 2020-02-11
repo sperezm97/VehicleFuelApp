@@ -21,6 +21,16 @@ const View = styled(nbView)`
     flex: 1;
   `}
 
+  ${is("padding")`
+    padding: ${({ padding }) =>
+      `${padding[0]}px ${padding[1]}px ${padding[2]}px ${padding[3]}px`}
+  `}
+
+  ${is("margin")`
+    margin: ${({ margin }) =>
+      `${margin[0]}px ${margin[1]}px ${margin[2]}px ${margin[3]}px`}
+  `}
+
   ${match("card", "left")`
     backgroundColor: ${({ theme }) => theme.colors.white};
     border-bottom-left-radius: 15px;
