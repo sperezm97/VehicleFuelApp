@@ -48,7 +48,7 @@ const iconValues = [
 function MainTapNavigator() {
   return (
     <MainTap.Navigator
-      initialRouteName="FUEL"
+      initialRouteName="SERVICES"
       tabBarOptions={defaultTabBarOptions}
       screenOptions={defaultScreenOptions}
       tabBar={props => <TabBar {...props} icons={iconValues} />}

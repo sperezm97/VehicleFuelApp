@@ -10,6 +10,7 @@ import BaseList from "./List/BaseList";
 import GallonItem from "./List/GallonItem";
 import HeaderList from "./List/HeaderList";
 import ServiceItem from "./List/ServiceItem";
+import CategoryItem from "./List/CategoryItem";
 
 import TabBar from "./TabBar";
 import FloatButton from "./FloatButton";
@@ -26,5 +27,6 @@ export {
   HeaderList,
   ServiceItem,
   TabBar,
-  FloatButton
+  FloatButton,
+  CategoryItem
 };

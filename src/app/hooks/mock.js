@@ -143,3 +143,30 @@ export const serviceList = [
     created_at: "06/15/2018"
   }
 ];
+
+export const categoryList = [
+  {
+    id: 1,
+    name: "Maintenance",
+    value: "525",
+    limitValue: "100"
+  },
+  {
+    id: 2,
+    name: "Maintenance",
+    value: "525",
+    limitValue: "100"
+  },
+  {
+    id: 3,
+    name: "Maintenance",
+    value: "525",
+    limitValue: "100"
+  },
+  {
+    id: 4,
+    name: "Maintenance",
+    value: "525",
+    limitValue: "100"
+  }
+];
