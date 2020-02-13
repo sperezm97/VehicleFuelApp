@@ -23,12 +23,14 @@ const View = styled(nbView)`
 
   ${is("padding")`
     padding: ${({ padding }) =>
-      `${padding[0]}px ${padding[1]}px ${padding[2]}px ${padding[3]}px`}
+      `${padding[0] || 0}px ${padding[1] || 0}px ${padding[2] ||
+        0}px ${padding[3] || 0}px`}
   `}
 
   ${is("margin")`
     margin: ${({ margin }) =>
-      `${margin[0]}px ${margin[1]}px ${margin[2]}px ${margin[3]}px`}
+      `${margin[0] || 0}px ${margin[1] || 0}px ${margin[2] ||
+        0}px ${margin[3] || 0}px`}
   `}
 
   ${match("card", "left")`
@@ -48,6 +50,24 @@ const View = styled(nbView)`
     margin-right: 10px
   `}
 
+  ${match("card", "container")`
+    flex: 1
+    flex-direction: column;
+    backgroundColor: ${({ theme }) => theme.colors.white};
+    margin: 20px 0 0 0;
+    border-top-start-radius: 20px;
+    border-top-end-radius: 20px;
+    padding: ${({ theme }) => theme.spacing.base}px;
+  `}
+
+  ${match("card", "body")`
+    flex-direction: column;
+    backgroundColor: ${({ theme }) => theme.colors.white};
+    border-radius: 15px;
+    padding: 20px
+    margin: 20px 0 10px 0;
+  `}
+
   ${match("align", "left")`
     align-items: flex-end;
     paddingRight: 20px;
@@ -58,15 +78,6 @@ const View = styled(nbView)`
     paddingLeft: 20px;
   `}
 
-  ${match("card", "container")`
-    flex: 1
-    flex-direction: column;
-    backgroundColor: ${({ theme }) => theme.colors.white};
-    margin: 20px 0 0 0;
-    border-top-start-radius: 20px;
-    border-top-end-radius: 20px;
-    padding: ${({ theme }) => theme.spacing.base}px;
-  `}
 
   ${is("line")`
     border-width: 1px;
@@ -93,6 +104,7 @@ const View = styled(nbView)`
     justify-content: space-between;
     align-content: center
   `}
+
   ${is("serviceThumb")`
     height: 50px;
     width: 50px;

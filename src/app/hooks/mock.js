@@ -170,3 +170,86 @@ export const categoryList = [
     limitValue: "100"
   }
 ];
+
+export const vehicleList = [
+  {
+    id: 1,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 2,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 3,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 4,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 5,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 6,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 7,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 8,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 9,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  },
+  {
+    id: 10,
+    image: "http://via.placeholder.com/300x150.png",
+    make: "Chevrolet",
+    model: "Cruz",
+    trim: "LTZ",
+    year: "2015"
+  }
+];
