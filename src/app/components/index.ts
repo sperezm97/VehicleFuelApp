@@ -1,6 +1,7 @@
 import Text from "./Text";
 import View from "./View";
 import Container from "./Container";
+import Image from "./Image";
 
 import CardList from "./Cards/CardList";
 import RightCard from "./Cards/RightCard";
@@ -18,6 +19,7 @@ import FloatButton from "./FloatButton";
 export {
   Text,
   View,
+  Image,
   CardList,
   RightCard,
   LeftCard,
