@@ -26,11 +26,11 @@ const Reports: React.FunctionComponent = () => {
   const renderItem = () => {
     return <CategoryItem />;
   };
-
+  // TODO: Find solution to use Array in styled components props
   return (
     <Container>
       <View flex column center>
-        <View center margin={[10, 0, 0, 0]}>
+        <View center>
           <Text caption color={colors.grey.base}>
             Your Total Expenditure
           </Text>
