@@ -6,7 +6,7 @@ import {
 } from "@react-navigation/bottom-tabs";
 import * as screens from "../screens";
 import theme from "../styles";
-import { Icon } from "native-base";
+import * as stacks from "../navigation/stacks";
 import { TabBar } from "../components";
 
 const MainTap = createBottomTabNavigator();
@@ -25,40 +25,21 @@ const defaultTabBarOptions: BottomTabBarOptions = {
 
 const defaultScreenOptions: BottomTabNavigationOptions = {};
 
-// TODO: Refactor Icons Selected
-const iconValues = [
-  {
-    type: "MaterialCommunityIcons",
-    name: "fuel"
-  },
-  {
-    type: "MaterialCommunityIcons",
-    name: "format-list-bulleted"
-  },
-  {
-    type: "MaterialCommunityIcons",
-    name: "chart-areaspline"
-  },
-  {
-    type: "MaterialCommunityIcons",
-    name: "car-multiple"
-  }
-];
-
-function MainTapNavigator() {
+const MainTapNavigator = (): React.ReactElement => {
   return (
     <MainTap.Navigator
-      initialRouteName="SERVICES"
+      initialRouteName="FUEL"
       tabBarOptions={defaultTabBarOptions}
       screenOptions={defaultScreenOptions}
-      tabBar={props => <TabBar {...props} icons={iconValues} />}
+      tabBar={props => <TabBar {...props} />}
       backBehavior="history"
+      lazy
     >
-      <MainTap.Screen name="FUEL" component={screens.Fuel} />
-      <MainTap.Screen name="SERVICES" component={screens.Services} />
+      <MainTap.Screen name="FUEL" component={stacks.FuelNavigator} />
+      <MainTap.Screen name="SERVICES" component={stacks.ServicesNavigator} />
       <MainTap.Screen name="REPORTS" component={screens.Reports} />
-      <MainTap.Screen name="MYGARBAGE" component={screens.MyGarbage} />
+      <MainTap.Screen name="MYGARBAGE" component={stacks.MyGarbageNavigator} />
     </MainTap.Navigator>
   );
-}
+};
 export default MainTapNavigator;
