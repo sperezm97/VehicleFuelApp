@@ -12,11 +12,14 @@ import {
   GallonItem
 } from "../app/components";
 import { fuelList } from "../app/hooks/mock";
+import { useNavigation } from "@react-navigation/native";
+import IHeaderList from "../app/types/HeaderList";
 
 const Fuel: React.FunctionComponent = () => {
   const [value, setValue] = useState("All Vehicles");
+  const navigation = useNavigation();
 
-  const header = () => (
+  const header = (): JSX.Element => (
     <HeaderList
       value={value}
       handleValueChange={setValue}
@@ -47,7 +50,9 @@ const Fuel: React.FunctionComponent = () => {
         <CardList data={fuelList} renderItem={renderItem} header={header} />
       </Content>
       <View>
-        <FloatButton onPress={() => {}} />
+        <FloatButton
+          onPress={() => navigation.navigate("FUEL", { screen: "AddFuel" })}
+        />
       </View>
     </Container>
   );

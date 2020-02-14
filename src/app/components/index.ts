@@ -16,6 +16,7 @@ import VehicleItem from "./List/VehicleItem";
 
 import TabBar from "./TabBar";
 import FloatButton from "./FloatButton";
+import Header from "./Header";
 
 export {
   Text,
@@ -32,5 +33,6 @@ export {
   TabBar,
   FloatButton,
   CategoryItem,
-  VehicleItem
+  VehicleItem,
+  Header
 };

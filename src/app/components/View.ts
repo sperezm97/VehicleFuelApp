@@ -99,7 +99,7 @@ const View = styled(nbView)`
     margin: 0 8px
   `}
 
-  ${is("headerContainer")`
+  ${is("listHeader")`
     flex: 1;
     justify-content: space-between;
     align-content: center
@@ -111,6 +111,33 @@ const View = styled(nbView)`
     border-radius: 25px;
     background-color: ${({ color }) => color}
   `}
+
+  ${is("headerContainer")`
+    flex:1;
+    height: 89px;
+    background-color: #fff
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+`}
+
+  ${is("headerLeft")`
+    flex:1;
+    align-items: flex-start
+  `}
+
+  ${is("headerBody")`
+    flex:1;
+    align-items: center
+        
+  `}
+
+  ${is("headerRight")`
+    flex:1;
+    align-items: flex-end
+        
+  `}
+
 
 `;
 

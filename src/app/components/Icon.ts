@@ -15,6 +15,11 @@ const Icon = styled(nbIcon)`
       font-size: ${({ theme }) => theme.fonts.body.fontSize}px;
       color: ${({ theme }) => theme.colors.black};
   `}
+
+  ${match("kind", "header")`
+    font-size: ${({ theme }) => theme.fonts.header.fontSize}px;
+    color: ${({ theme }) => theme.colors.grey.base};
+  `}
 `;
 
 export default Icon;

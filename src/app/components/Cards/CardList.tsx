@@ -7,7 +7,7 @@ import IHeaderList from "../../types/HeaderList";
 interface CardList {
   data: [any];
   renderItem: () => React.ReactElement;
-  header?: React.ReactElement<IHeaderList>;
+  header?: JSX.Element;
 }
 
 const CardList: React.FunctionComponent<CardList> = props => {
