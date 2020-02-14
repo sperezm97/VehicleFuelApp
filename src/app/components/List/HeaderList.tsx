@@ -7,7 +7,7 @@ import IHeaderList from "../../types/HeaderList";
 
 const HeaderList: React.FunctionComponent<IHeaderList> = props => {
   return (
-    <View headerContainer>
+    <View listHeader>
       <View headerList>
         <Text body color={colors.grey.base}>
           Showing fuel data for:
