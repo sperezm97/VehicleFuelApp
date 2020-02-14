@@ -1,68 +1,62 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, Route } from "react-native";
 import { Icon } from "native-base";
 import styles from "./styles";
+import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 
-const TabBar = ({ state, descriptors, navigation, icons }) => {
-  return (
-    <View style={styles.container}>
-      {state.routes.map((route, index) => {
-        const { options } = descriptors[route.key];
-        const label =
-          options.tabBarLabel !== undefined
-            ? options.tabBarLabel
-            : options.title !== undefined
-            ? options.title
-            : route.name;
+const TabBar = ({
+  state,
+  navigation
+}): React.FunctionComponentElement<BottomTabBarProps> => {
+  const icons = [
+    "fuel",
+    "format-list-bulleted",
+    "chart-areaspline",
+    "car-multiple"
+  ];
 
-        const isFocused = state.index === index;
+  const onPress = (route: Route, isSelected: Boolean): void => {
+    const event = navigation.emit({
+      type: "tabPress",
+      target: route.key
+    });
 
-        const onPress = () => {
-          const event = navigation.emit({
-            type: "tabPress",
-            target: route.key
-          });
+    if (!isSelected && !event.defaultPrevented) {
+      navigation.navigate(route.name);
+    }
+  };
 
-          if (!isFocused && !event.defaultPrevented) {
-            navigation.navigate(route.name);
-          }
-        };
+  const isFocused = (selectedIndex: number, index: number): Boolean => {
+    return selectedIndex == index;
+  };
 
-        return (
-          <TouchableOpacity
-            key={label}
-            onPress={onPress}
-            style={styles.onPressContainer}
-          >
-            <View style={{ flex: 1 }}></View>
-            <Icon
-              name={icons[index].name}
-              type={icons[index].type}
-              style={[
-                ,
-                styles.icon,
-                {
-                  color: isFocused ? "#E4222B" : "#9498A7"
-                }
-              ]}
-            />
-            <View>
-              <Text
-                style={[
-                  styles.label,
-                  {
-                    color: isFocused ? "#E4222B" : "#9498A7"
-                  }
-                ]}
-              >
-                {label}
-              </Text>
-            </View>
-          </TouchableOpacity>
-        );
-      })}
-    </View>
-  );
+  const changeColorSelected = (isSelected: Boolean): Object => {
+    return {
+      color: isSelected ? "#E4222B" : "#9498A7"
+    };
+  };
+
+  const renderItem = (route, index) => {
+    const isSelected = isFocused(state.index, index);
+    const color = changeColorSelected(isSelected);
+
+    return (
+      <TouchableOpacity
+        key={route.name}
+        onPress={() => onPress(route, isSelected)}
+        style={styles.onPressContainer}
+      >
+        <Icon
+          name={icons[index]}
+          type={"MaterialCommunityIcons"}
+          style={[styles.icon, color]}
+        />
+        <Text style={[styles.label, color]}>{route.name}</Text>
+      </TouchableOpacity>
+    );
+  };
+
+  return <View style={styles.container}>{state.routes.map(renderItem)}</View>;
 };
 
 export default TabBar;
