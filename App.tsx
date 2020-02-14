@@ -5,6 +5,8 @@ import { AppLoading } from "expo";
 import "./src/app/config/sentry";
 import "./src/app/config/env";
 
+console.disableYellowBox = true;
+
 export default function App() {
   const [isFontLoaded, setIsFontLoaded] = useState(false);
 
