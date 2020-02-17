@@ -4,10 +4,10 @@ import {
   BottomTabNavigationOptions,
   BottomTabBarOptions
 } from "@react-navigation/bottom-tabs";
-import * as screens from "../screens";
-import theme from "../styles";
+import * as screens from "../../features/screens";
+import theme from "../../comon/styles";
 import * as stacks from "../navigation/stacks";
-import { TabBar } from "../components";
+import { TabBar } from "../../comon/components";
 
 const MainTap = createBottomTabNavigator();
 

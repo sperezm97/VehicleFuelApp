@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import withHOC from "../app/hooks/hoc";
+import withHOC from "../../comon/hooks/hoc";
 import {
   Container,
   View,
@@ -9,9 +9,9 @@ import {
   FloatButton,
   HeaderList,
   ServiceItem
-} from "../app/components";
+} from "../../comon/components";
 import { Content } from "native-base";
-import { serviceList } from "../app/hooks/mock";
+import { serviceList } from "../../comon/hooks/mock";
 const Services: React.FunctionComponent = () => {
   const [value, setValue] = useState("All Vehicles");
 

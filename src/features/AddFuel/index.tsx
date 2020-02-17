@@ -1,6 +1,6 @@
 import React from "react";
 import {} from "react-native";
-import { Container, Header, View, Text } from "../app/components";
+import { Container, Header, View, Text } from "../../comon/components";
 import { Content } from "native-base";
 
 const AddFuel = () => {

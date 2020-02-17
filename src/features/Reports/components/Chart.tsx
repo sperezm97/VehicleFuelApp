@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { LineChart, ChartConfig, LineChartData } from "react-native-chart-kit";
-import spacing from "../../app/styles/spacing";
-import colors from "../../app/styles/colors";
+import spacing from "../../../comon/styles/spacing";
+import colors from "../../../comon/styles/colors";
 import { RnViewStyleProp } from "native-base";
 
 const Chart = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import View from "../View";
 import BaseList from "../List/BaseList";
 import GallonItem from "../List/GallonItem";
-import IHeaderList from "../../types/HeaderList";
+import IHeaderList from "../../../app/types/HeaderList";
 
 interface CardList {
   data: [any];

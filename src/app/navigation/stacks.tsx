@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import * as screens from "../screens";
-import Header from "../components/Header";
+import * as screens from "../../features/screens";
+import Header from "../../comon/components/Header";
 
 const FuelStack = createStackNavigator();
 const MyGarbageStack = createStackNavigator();

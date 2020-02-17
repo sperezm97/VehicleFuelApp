@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text } from "../../app/components";
-import colors from "../../app/styles/colors";
+import { View, Text } from "../../../comon/components";
+import colors from "../../../comon/styles/colors";
 
 const VehicleCard = () => {
   return (

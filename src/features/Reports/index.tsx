@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import withHOC from "../app/hooks/hoc";
+import withHOC from "../../comon/hooks/hoc";
 import { Chart } from "./components";
 import {
   Container,
@@ -8,10 +8,10 @@ import {
   CategoryItem,
   View,
   Text
-} from "../app/components";
-import { categoryList } from "../app/hooks/mock";
+} from "../../comon/components";
+import { categoryList } from "../../comon/hooks/mock";
 import { Content } from "native-base";
-import colors from "../app/styles/colors";
+import colors from "../../comon/styles/colors";
 const Reports: React.FunctionComponent = () => {
   const [value, setValue] = useState("");
   const header = () => (

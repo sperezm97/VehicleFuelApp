@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import withHOC from "../app/hooks/hoc";
+import withHOC from "../../comon/hooks/hoc";
 import {
   Container,
   CardList,
@@ -8,10 +8,10 @@ import {
   Text,
   FloatButton,
   VehicleItem
-} from "../app/components";
-import { vehicleList } from "../app/hooks/mock";
+} from "../../comon/components";
+import { vehicleList } from "../../comon/hooks/mock";
 import { Content } from "native-base";
-import colors from "../app/styles/colors";
+import colors from "../../comon/styles/colors";
 import VehicleCard from "./components/VehicleCard";
 
 const MyGarbage: React.FunctionComponent = () => {

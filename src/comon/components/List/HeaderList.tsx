@@ -3,7 +3,18 @@ import View from "../View";
 import Text from "../Text";
 import Picker from "../Picker";
 import colors from "../../styles/colors";
-import IHeaderList from "../../types/HeaderList";
+
+interface ItemOptions {
+  label: string;
+  value: string | number;
+}
+
+interface IHeaderList {
+  value: string;
+  handleValueChange: (value: string) => void;
+  placeholder: string;
+  options: [ItemOptions];
+}
 
 const HeaderList: React.FunctionComponent<IHeaderList> = props => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import withHOC from "../app/hooks/hoc";
+import withHOC from "../../comon/hooks/hoc";
 import { Content } from "native-base";
 import {
   View,
@@ -10,8 +10,8 @@ import {
   HeaderList,
   FloatButton,
   GallonItem
-} from "../app/components";
-import { fuelList } from "../app/hooks/mock";
+} from "../../comon/components";
+import { fuelList } from "../../comon/hooks/mock";
 import { useNavigation } from "@react-navigation/native";
 import IHeaderList from "../app/types/HeaderList";
 
