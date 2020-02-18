@@ -1,6 +1,5 @@
-import * as firebase from "firebase";
-import "@firebase/firestore";
-import "@firebase/analytics";
+import * as firebase from "firebase/app";
+import "firebase/firestore";
 import env from "./env";
 
 // Initialize Firebase
@@ -17,8 +16,6 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const instance = firebase.firestore();
+const db = firebase.firestore();
 
-const analytics = firebase.analytics();
-
-export { instance, analytics };
+export { db };
