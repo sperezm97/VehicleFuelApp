@@ -4,6 +4,7 @@ import * as Font from "expo-font";
 import { AppLoading } from "expo";
 import "./src/app/config/sentry";
 import "./src/app/config/env";
+import "./src/app/config/firebase";
 
 console.disableYellowBox = true;
 
