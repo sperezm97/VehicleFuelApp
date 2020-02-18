@@ -23,4 +23,4 @@ const fuelSlice = createSlice({
 
 export const { setFuels, clearFuel, updateFuel } = fuelSlice.actions;
 
-export default fuelSlice;
+export default fuelSlice.reducer;

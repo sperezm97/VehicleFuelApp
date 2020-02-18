@@ -15,4 +15,4 @@ const myGarageSlice = createSlice({
 
 export const { setGarage, clearGarage } = myGarageSlice.actions;
 
-export default myGarageSlice;
+export default myGarageSlice.reducer;
