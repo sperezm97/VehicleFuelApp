@@ -38,7 +38,7 @@ const MainTapNavigator = (): React.ReactElement => {
       <MainTap.Screen name="FUEL" component={stacks.FuelNavigator} />
       <MainTap.Screen name="SERVICES" component={stacks.ServicesNavigator} />
       <MainTap.Screen name="REPORTS" component={screens.Reports} />
-      <MainTap.Screen name="MYGARBAGE" component={stacks.MyGarbageNavigator} />
+      <MainTap.Screen name="MYGARAGE" component={stacks.MyGarageNavigator} />
     </MainTap.Navigator>
   );
 };
