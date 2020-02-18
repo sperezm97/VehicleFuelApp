@@ -40,8 +40,25 @@ const TabBar = ({
     const isSelected = isFocused(state.index, index);
     const color = changeColorSelected(isSelected);
 
+    if (route.name == "FUEL" || route.name == "MYGARAGE") {
+      return (
+        <TouchableOpacity
+          key={route.name}
+          onPress={() => onPress(route, isSelected)}
+          style={styles.onPressContainer}
+        >
+          <Icon
+            name={icons[index]}
+            type={"MaterialCommunityIcons"}
+            style={[styles.icon, color]}
+          />
+          <Text style={[styles.label, color]}>{route.name}</Text>
+        </TouchableOpacity>
+      );
+    }
     return (
       <TouchableOpacity
+        disabled
         key={route.name}
         onPress={() => onPress(route, isSelected)}
         style={styles.onPressContainer}
@@ -49,9 +66,10 @@ const TabBar = ({
         <Icon
           name={icons[index]}
           type={"MaterialCommunityIcons"}
-          style={[styles.icon, color]}
+          style={[styles.icon, { color: "#9498A7" }]}
         />
-        <Text style={[styles.label, color]}>{route.name}</Text>
+        <Text style={[styles.label, { color: "#9498A7" }]}>{route.name}</Text>
+        <Text style={[styles.disable, { color: "#9498A7" }]}>Coming Soon</Text>
       </TouchableOpacity>
     );
   };

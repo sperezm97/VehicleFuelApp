@@ -3,8 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    height: 84,
-    paddingBottom: 34,
+    height: 70,
     elevation: 8,
     left: 0,
     right: 0,
@@ -33,6 +32,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
     backgroundColor: "transparent",
     fontSize: 11,
+    marginBottom: 1.5
+  },
+  disable: {
+    textAlign: "center",
+    backgroundColor: "transparent",
+    fontSize: 8,
     marginBottom: 1.5
   }
 });
