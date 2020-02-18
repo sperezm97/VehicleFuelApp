@@ -21,14 +21,14 @@ export const FuelNavigator = () => (
   </FuelStack.Navigator>
 );
 
-export const MyGarbageNavigator = () => (
+export const MyGarageNavigator = () => (
   <MyGarbageStack.Navigator
-    initialRouteName="MyGarbage"
+    initialRouteName="MyGarage"
     screenOptions={defaultScreenOptions}
     mode="modal"
     headerMode="none"
   >
-    <FuelStack.Screen name="MyGarbage" component={screens.MyGarbage} />
+    <FuelStack.Screen name="MyGarbage" component={screens.MyGarage} />
     <FuelStack.Screen name="AddVehicle" component={screens.AddVehicle} />
   </MyGarbageStack.Navigator>
 );
