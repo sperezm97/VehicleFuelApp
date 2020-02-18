@@ -8,6 +8,12 @@ import "./src/app/config/firebase";
 
 console.disableYellowBox = true;
 
+if (__DEV__) {
+  import("./src/app/config/ReactotronConfig").then(() =>
+    console.log("Reactotron Configured")
+  );
+}
+
 export default function App() {
   const [isFontLoaded, setIsFontLoaded] = useState(false);
 
