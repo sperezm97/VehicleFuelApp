@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import withHOC from "../../comon/hooks/hoc";
 import {
   Container,
   CardList,
@@ -31,10 +30,10 @@ const MyGarbage: React.FunctionComponent = () => {
       >
         <CardList data={vehicleList} renderItem={renderItem} />
       </Content>
-      <View>
+      {/* <View>
         <FloatButton onPress={() => {}} />
-      </View>
+      </View> */}
     </Container>
   );
 };
-export default withHOC(MyGarbage);
+export default MyGarbage;
