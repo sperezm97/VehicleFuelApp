@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import withHOC from "../../comon/hooks/hoc";
 import { Content } from "native-base";
 import {
   View,
@@ -58,4 +57,4 @@ const Fuel: React.FunctionComponent = () => {
   );
 };
 
-export default withHOC(Fuel);
+export default Fuel;

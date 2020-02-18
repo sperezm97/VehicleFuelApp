@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import withHOC from "../../comon/hooks/hoc";
 import {
   Container,
   View,
@@ -51,4 +50,4 @@ const Services: React.FunctionComponent = () => {
     </Container>
   );
 };
-export default withHOC(Services);
+export default Services;

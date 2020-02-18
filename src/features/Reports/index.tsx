@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import withHOC from "../../comon/hooks/hoc";
 import { Chart } from "./components";
 import {
   Container,
@@ -51,4 +50,4 @@ const Reports: React.FunctionComponent = () => {
     </Container>
   );
 };
-export default withHOC(Reports);
+export default Reports;
