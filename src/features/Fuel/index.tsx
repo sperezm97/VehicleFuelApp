@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Content } from "native-base";
 import {
   View,
@@ -12,11 +12,31 @@ import {
 } from "../../comon/components";
 import { fuelList } from "../../comon/hooks/mock";
 import { useNavigation } from "@react-navigation/native";
-import IHeaderList from "../app/types/HeaderList";
+import { useDispatch, useSelector } from "react-redux";
+import { getFuels } from "./fuelSlice";
 
 const Fuel: React.FunctionComponent = () => {
   const [value, setValue] = useState("All Vehicles");
+  const [isLoading, setLoading] = useState(true);
   const navigation = useNavigation();
+  const dispatch = useDispatch();
+  // const fuels = useSelector(state => console.log(state));
+
+  const fetchFuelsByVehicle = () => {
+    dispatch({ type: "fuels/fetch" });
+    setLoading(false);
+  };
+
+  const clearFuelsByVehicle = () => {
+    dispatch({ type: "fuels/clearFuel" });
+  };
+
+  useEffect(() => {
+    fetchFuelsByVehicle();
+    return () => {
+      clearFuelsByVehicle();
+    };
+  }, []);
 
   const header = (): JSX.Element => (
     <HeaderList
@@ -46,7 +66,7 @@ const Fuel: React.FunctionComponent = () => {
         scrollEnabled={false}
         nestedScrollEnabled
       >
-        <CardList data={fuelList} renderItem={renderItem} header={header} />
+        <CardList data={[]} renderItem={renderItem} header={header} />
       </Content>
       <View>
         <FloatButton

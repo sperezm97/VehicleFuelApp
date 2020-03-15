@@ -5,22 +5,25 @@ const fuelSlice = createSlice({
   initialState: [],
   reducers: {
     setFuels: (state, action) => {
-      state.concat(action.payload);
+      console.log(action);
+      // const { data } = action.payload;
+      // console.log(data);
+      // data.forEach(doc => {
+      //   const value = doc.data();
+      //   console.log(doc);
+      //   state.push(value);
+      // });
+      // console.log("state", state);
+      // return state;
     },
-    updateFuel: (state, action) => {
-      state.map(fuel => {
-        if (fuel.id == action.payload.id) {
-          fuel = action.payload.data;
-        }
-        return fuel;
-      });
-    },
-    clearFuel: (state, action) => {
-      state.splice(0, state.length);
-    }
+    updateFuel: (state, action) => {},
+    clearFuel: (state, action) => {},
+    setError: (state, action) => {}
   }
 });
 
-export const { setFuels, clearFuel, updateFuel } = fuelSlice.actions;
+export const getFuels = state => state.fuels;
+
+export const { setFuels, clearFuel, updateFuel, setError } = fuelSlice.actions;
 
 export default fuelSlice.reducer;
