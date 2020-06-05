@@ -19,7 +19,7 @@
     "@reduxjs/toolkit": "^1.2.3",
     "expo": "~36.0.0",
     "expo-device": "~2.0.0",
-    "firebase": "^7.8.0",
+    "firebase": "^7.15.0",
     "formik": "^2.1.4",
     "lodash": "^4.17.15",
     "native-base": "^2.13.8",
